@@ -13,6 +13,12 @@ $user = "";
 
 if (array_key_exists ( "user", $_SESSION )) {
     $user = $_SESSION ['user'];
+}else
+    yonlendir(0,"login.php");
+
+function yonlendir($sure,$sayfa){
+    $deger = "<meta http-equiv=\"refresh\" content=\"$sure;url=$sayfa\">\n";
+    return $deger;
 }
 
 function getHead($title)

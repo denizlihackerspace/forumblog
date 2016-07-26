@@ -1,3 +1,7 @@
+<?php
+require_once 'functions.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,6 +26,29 @@
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
 
+  <?php
+
+  if(isset($_POST['login'])){
+    $password=$_POST['pass'];
+    $email=$_POST['eposta']; // formdan gelen giriş bilgilerini aldık
+
+    // daha sonra böyle bir kullanıcı veritabanında var mı
+    // yok mu bunu kontrol edip oturum açacağız
+    $uye=mysqli_query($conn,"SELECT * FROM uyeler WHERE email='$email' AND password='$password' ");
+    $sonuc=mysqli_num_rows($uye);
+    if($sonuc>0){
+
+      $user=$_SESSION['user']=$email;
+
+      yonlendir(0,"index.php");
+
+    }else{
+      echo "kayıtlı değil";
+    }
+  }
+
+  ?>
+
   <body class="login">
     <div>
       <a class="hiddenanchor" id="signup"></a>
@@ -30,7 +57,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form method="post" action="" >
               <h1>Login Form</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
@@ -39,7 +66,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <input type="submit" class="btn btn-default submit" value="Giriş Yap"/>
+                <input type="submit" name="login" class="btn btn-default submit" value="Giriş Yap"/>
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
