@@ -38,14 +38,28 @@ require_once 'functions.php'
     $sonuc=mysqli_num_rows($uye);
     if($sonuc>0){
       $user=$_SESSION['user']=$email;
-      yonlendir(0,"index.php");
+      echo yonlendir(0,"index.php");
     }else{
       echo "kayıtlı değil";
     }
   }
   else if(isset($_POST['ekle']))
   {
-    $username=$_POST[''];
+    $ad=$_POST['ad'];
+    $soyad=$_POST['soyad'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $rs=mysqli_query($conn,"INSERT INTO uyeler(uye_ad,uye_soyad,uye_email,uye_password)VALUES ('$ad','$soyad','$email','$password')");
+    if($rs)
+    {
+      echo "kayıt başarılı..yönlendiriliyorsunuz";
+      echo yonlendir(2,"login.php#signin");
+    }
+    else
+    {
+      echo "Kayıt sırasında bir hata oluştu.Tekrar deneyin";
+     echo yonlendir(2,"login.php#signup");
+    }
   }
   ?>
 
@@ -60,10 +74,10 @@ require_once 'functions.php'
             <form method="post" action="" >
               <h1> Giriş Formu</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Kullanıcı adı" required="" />
+                <input type="email" class="form-control"  name="eposta" placeholder="Kullanıcı adı veya Eposta adresiniz" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Şifre" required="" />
+                <input type="password" class="form-control" name="pass" placeholder="Şifre" required="" />
               </div>
               <div>
                 <input type="submit" name="login" class="btn btn-default submit" value="Giriş Yap"/>
@@ -91,19 +105,22 @@ require_once 'functions.php'
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form method="post">
               <h1>Hesap Oluştur</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Kullanıcı adı" required="" />
+                <input type="text" class="form-control" name="ad"placeholder="Adınız" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
+                <input type="text" class="form-control" name="soyad"placeholder="Soyadınız" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Şifre" required="" />
+                <input type="email" class="form-control" name="email"placeholder="Email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Şifre Tekrar" required="" />
+                <input type="password" class="form-control" name="password" placeholder="Şifre" required="" />
+              </div>
+              <div>
+                <input type="password" class="form-control" name="rpassword" placeholder="Şifre Tekrar" required="" />
               </div>
               <div>
                 <input class="btn btn-default submit" type="submit" name="ekle" value="Oluştur">
