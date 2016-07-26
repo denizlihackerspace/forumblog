@@ -10,7 +10,7 @@
 $host="localhost";
 $user="root";
 $pass="1234";
-$db="deneme";
+$db="forumblog";
 
 $conn=mysqli_connect($host,$user,$pass,$db);
 mysqli_query($conn,"SET NAMES utf8");
