@@ -34,14 +34,11 @@ require_once 'functions.php'
 
     // daha sonra böyle bir kullanıcı veritabanında var mı
     // yok mu bunu kontrol edip oturum açacağız
-    $uye=mysqli_query($conn,"SELECT * FROM uyeler WHERE email='$email' AND password='$password' ");
+    $uye=mysqli_query($conn,"SELECT * FROM uyeler WHERE uye_email='$email' AND uye_password='$password' ");
     $sonuc=mysqli_num_rows($uye);
     if($sonuc>0){
-
       $user=$_SESSION['user']=$email;
-
       yonlendir(0,"index.php");
-
     }else{
       echo "kayıtlı değil";
     }

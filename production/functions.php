@@ -13,6 +13,12 @@ $user = "";
 
 if (array_key_exists ( "user", $_SESSION )) {
     $user = $_SESSION ['user'];
+    $userRs=mysqli_query($conn,"SELECT * FROM uyeler WHERE uye_email='{$user}' ");
+    $bilgiler=mysqli_fetch_array($userRs);
+    $userId=$bilgiler[0];
+    $userAd=$bilgiler[1];
+    $userSoyad=$bilgiler[2];
+    $userEmail=$bilgiler[3];
 }else
     yonlendir(0,"login.php");
 
