@@ -43,7 +43,10 @@ require_once 'functions.php'
       echo "kayıtlı değil";
     }
   }
-
+  else if(isset($_POST['ekle']))
+  {
+    $username=$_POST[''];
+  }
   ?>
 
   <body class="login">
@@ -55,12 +58,12 @@ require_once 'functions.php'
         <div class="animate form login_form">
           <section class="login_content">
             <form method="post" action="" >
-              <h1>Login Form</h1>
+              <h1> Giriş Formu</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Kullanıcı adı" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Şifre" required="" />
               </div>
               <div>
                 <input type="submit" name="login" class="btn btn-default submit" value="Giriş Yap"/>
@@ -89,18 +92,22 @@ require_once 'functions.php'
         <div id="register" class="animate form registration_form">
           <section class="login_content">
             <form>
-              <h1>Create Account</h1>
+              <h1>Hesap Oluştur</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Kullanıcı adı" required="" />
               </div>
               <div>
                 <input type="email" class="form-control" placeholder="Email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Şifre" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <input type="password" class="form-control" placeholder="Şifre Tekrar" required="" />
+              </div>
+              <div>
+                <input class="btn btn-default submit" type="submit" name="ekle" value="Oluştur">
+
               </div>
 
               <div class="clearfix"></div>

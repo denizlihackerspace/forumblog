@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c310da92-c180-496d-a670-a9e2ff1c6799" name="Default" comment="" />
+    <list default="true" id="c310da92-c180-496d-a670-a9e2ff1c6799" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/config.php" afterPath="$PROJECT_DIR$/production/config.php" />
+    </list>
     <ignored path="forumblog.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,10 +28,10 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/production/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="306">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
-                <marker date="1469568827325" expanded="true" signature="1182:1256" placeholder="SELECT * FRO... uyeler" />
+                <marker date="1469566761744" expanded="true" signature="1182:1248" placeholder="SELECT * FRO... uyeler" />
               </folding>
             </state>
           </provider>
@@ -50,7 +53,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/production/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -72,14 +75,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/production/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-              <folding>
-                <marker date="1469569170650" expanded="true" signature="282:328" placeholder="SELECT * FRO... uyeler" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -94,9 +95,9 @@
       <list>
         <option value="$PROJECT_DIR$/production/index.php" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/production/config.php" />
         <option value="$PROJECT_DIR$/production/login.php" />
         <option value="$PROJECT_DIR$/production/functions.php" />
+        <option value="$PROJECT_DIR$/production/config.php" />
       </list>
     </option>
   </component>
@@ -229,20 +230,12 @@
       <option name="presentableId" value="Default" />
       <updated>1469552236346</updated>
       <workItem from="1469552238282" duration="96000" />
-      <workItem from="1469559422151" duration="8192000" />
+      <workItem from="1469559422151" duration="6984000" />
     </task>
-    <task id="LOCAL-00001" summary="commit">
-      <created>1469569225158</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1469569225158</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8288000" />
+    <option name="totallyTimeSpent" value="7080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -271,10 +264,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -307,6 +296,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/production/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+          <folding>
+            <marker date="1469566761744" expanded="true" signature="1182:1248" placeholder="SELECT * FRO... uyeler" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
@@ -326,26 +333,6 @@
         <state relative-caret-position="136">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-          <folding>
-            <marker date="1469568827325" expanded="true" signature="1182:1256" placeholder="SELECT * FRO... uyeler" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding>
-            <marker date="1469569170650" expanded="true" signature="282:328" placeholder="SELECT * FRO... uyeler" />
-          </folding>
         </state>
       </provider>
     </entry>
