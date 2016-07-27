@@ -1,5 +1,11 @@
 <?php
-require_once 'functions.php'
+require_once 'config.php';
+
+function yonlendir($sure,$sayfa){
+  $deger = "<meta http-equiv=\"refresh\" content=\"$sure;url=$sayfa\">\n";
+  return $deger;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +67,10 @@ require_once 'functions.php'
      echo yonlendir(2,"login.php#signup");
     }
   }
+  else if(isset($_SESSION['user'])){
+    echo "zaten giriş yaptınız..";
+    echo yonlendir(1,"index.php");
+  }
   ?>
 
   <body class="login">
@@ -74,29 +84,29 @@ require_once 'functions.php'
             <form method="post" action="" >
               <h1> Giriş Formu</h1>
               <div>
-                <input type="email" class="form-control"  name="eposta" placeholder="Kullanıcı adı veya Eposta adresiniz" required="" />
+                <input type="email" class="form-control"  name="eposta" placeholder="Eposta adresiniz" required="" />
               </div>
               <div>
                 <input type="password" class="form-control" name="pass" placeholder="Şifre" required="" />
               </div>
               <div>
                 <input type="submit" name="login" class="btn btn-default submit" value="Giriş Yap"/>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a class="reset_pass" href="#">Şifreni mi unuttun?</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                <p class="change_link">Kayıtlı değil misin?
+                  <a href="#signup" class="to_register"> Hesap Oluştur </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> HS Denizli </h1>
+                  <p>©2016 All Rights Reserved.</p>
                 </div>
               </div>
             </form>
@@ -130,16 +140,16 @@ require_once 'functions.php'
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
+                <p class="change_link">Zaten üye misin ?
+                  <a href="#signin" class="to_register"> Giriş Yap </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h1><i class="fa fa-paw"></i> HS Denizli </h1>
+                  <p>©2016 All Rights Reserved.</p>
                 </div>
               </div>
             </form>

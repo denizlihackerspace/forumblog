@@ -20,7 +20,7 @@ if (array_key_exists ( "user", $_SESSION )) {
     $userSoyad=$bilgiler[2];
     $userEmail=$bilgiler[3];
 }else
-    yonlendir(0,"login.php");
+    echo yonlendir(0,"login.php");
 
 function yonlendir($sure,$sayfa){
     $deger = "<meta http-equiv=\"refresh\" content=\"$sure;url=$sayfa\">\n";
