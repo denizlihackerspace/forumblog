@@ -1,3 +1,3 @@
 # forumblog
 
-tablolar -> https://www.draw.io/#G0BzbLIuwSnZ7aM05DWmt4QlNNYVk
+tablolar -> https://drive.google.com/file/d/0BzbLIuwSnZ7aM05DWmt4QlNNYVk/view?usp=sharing
