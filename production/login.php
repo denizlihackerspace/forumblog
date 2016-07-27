@@ -31,54 +31,52 @@ function yonlendir($sure,$sayfa){
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
-
-  <?php
-
-  if(isset($_POST['login'])){
-    $password=$_POST['pass'];
-    $email=$_POST['eposta']; // formdan gelen giriş bilgilerini aldık
-
-    // daha sonra böyle bir kullanıcı veritabanında var mı
-    // yok mu bunu kontrol edip oturum açacağız
-    $uye=mysqli_query($conn,"SELECT * FROM uyeler WHERE uye_email='$email' AND uye_password='$password' ");
-    $sonuc=mysqli_num_rows($uye);
-    if($sonuc>0){
-      $user=$_SESSION['user']=$email;
-      echo yonlendir(0,"index.php");
-    }else{
-      echo "kayıtlı değil";
-    }
-  }
-  else if(isset($_POST['ekle']))
-  {
-    $ad=$_POST['ad'];
-    $soyad=$_POST['soyad'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $rs=mysqli_query($conn,"INSERT INTO uyeler(uye_ad,uye_soyad,uye_email,uye_password)VALUES ('$ad','$soyad','$email','$password')");
-    if($rs)
-    {
-      echo "kayıt başarılı..yönlendiriliyorsunuz";
-      echo yonlendir(2,"login.php#signin");
-    }
-    else
-    {
-      echo "Kayıt sırasında bir hata oluştu.Tekrar deneyin";
-     echo yonlendir(2,"login.php#signup");
-    }
-  }
-  else if(isset($_SESSION['user'])){
-    echo "zaten giriş yaptınız..";
-    echo yonlendir(1,"index.php");
-  }
-  ?>
-
   <body class="login">
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">
+        <?php
+
+        if(isset($_POST['login'])){
+          $password=$_POST['pass'];
+          $email=$_POST['eposta']; // formdan gelen giriş bilgilerini aldık
+
+          // daha sonra böyle bir kullanıcı veritabanında var mı
+          // yok mu bunu kontrol edip oturum açacağız
+          $uye=mysqli_query($conn,"SELECT * FROM uyeler WHERE uye_email='$email' AND uye_password='$password' ");
+          $sonuc=mysqli_num_rows($uye);
+          if($sonuc>0){
+            $user=$_SESSION['user']=$email;
+            echo yonlendir(0,"index.php");
+          }else{
+            echo "Kullanıcı adı veya şifre hatalı..";
+          }
+        }
+        else if(isset($_POST['ekle']))
+        {
+          $ad=$_POST['ad'];
+          $soyad=$_POST['soyad'];
+          $email=$_POST['email'];
+          $password=$_POST['password'];
+          $rs=mysqli_query($conn,"INSERT INTO uyeler(uye_ad,uye_soyad,uye_email,uye_password)VALUES ('$ad','$soyad','$email','$password')");
+          if($rs)
+          {
+            echo "kayıt başarılı..yönlendiriliyorsunuz";
+            echo yonlendir(2,"login.php#signin");
+          }
+          else
+          {
+            echo "Kayıt sırasında bir hata oluştu.Tekrar deneyin";
+            echo yonlendir(2,"login.php#signup");
+          }
+        }
+        else if(isset($_SESSION['user'])){
+          echo "zaten giriş yaptınız..";
+          echo yonlendir(1,"index.php");
+        }
+        ?>
         <div class="animate form login_form">
           <section class="login_content">
             <form method="post" action="" >

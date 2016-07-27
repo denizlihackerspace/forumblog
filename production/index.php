@@ -1,3 +1,7 @@
+<?php
+require_once 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,8 +101,9 @@
 <div class="container" style="margin-top: 70px">
 	<div class="row form-group product-chooser">
 		<div class="col-md-2"></div>
+		<div class="col-md-8"><span><h2>Hoşgeldiniz, <?php echo $userAd." ".$userSoyad." [<a href=\"logout.php\">Çıkış Yap</a>]"; ?></h2></span>
 		<a href="blog/">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div class="product-chooser-item">
 					<img src="images/blog.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Desktop">
 					<div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
@@ -108,7 +113,7 @@
 			</div>
 		</a>
 		<a href="forum/">
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 				<div class="product-chooser-item">
 					<img src="images/forum.png" class="img-rounded col-xs-4 col-sm-4 col-md-12 col-lg-12" alt="Desktop">
 					<div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
@@ -117,6 +122,7 @@
 				</div>
 			</div>
 		</a>
+		</div>
 		<div class="col-md-2"></div>
 
 	</div>
