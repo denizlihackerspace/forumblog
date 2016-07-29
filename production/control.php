@@ -26,4 +26,3 @@ function yonlendir($sure,$sayfa){
     $deger = "<meta http-equiv=\"refresh\" content=\"$sure;url=$sayfa\">\n";
     return $deger;
 }
-

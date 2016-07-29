@@ -6,7 +6,7 @@
  * Time: 00:50
  */
 
-require_once 'functions.php';
+require_once 'control.php';
 
 if($user){
     session_destroy();

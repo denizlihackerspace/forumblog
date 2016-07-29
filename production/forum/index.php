@@ -6,7 +6,7 @@
  * Time: 11:25
  */
 
-require_once '../functions.php';
+require_once '../control.php';
 
 
 
