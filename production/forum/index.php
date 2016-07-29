@@ -5,3 +5,8 @@
  * Date: 27.7.2016
  * Time: 11:25
  */
+
+require_once '../functions.php';
+
+
+

@@ -20,35 +20,10 @@ if (array_key_exists ( "user", $_SESSION )) {
     $userSoyad=$bilgiler[2];
     $userEmail=$bilgiler[3];
 }else
-    echo yonlendir(0,"login.php");
+    echo yonlendir(0,"http://localhost/forumblog/production/login.php");
 
 function yonlendir($sure,$sayfa){
     $deger = "<meta http-equiv=\"refresh\" content=\"$sure;url=$sayfa\">\n";
     return $deger;
 }
 
-function getHead($title)
-{
-    $string="
-    
-    ";
-    return $string;
-}
-
-function getHeader(){
-    $string="
-    
-    ";
-    return $string;
-}
-
-function getMenu(){
-    return "
-    
-    ";
-}
-function getFooter(){
-    return "
-    
-    ";
-}
