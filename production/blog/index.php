@@ -1,20 +1,14 @@
 <?php 
 
-
+require_once "functionsBlog.php";
  ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Blog hakerspace</title>
+<?php getHead("Blog Hacker Space"); ?>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../documentation/css/bootstrap.min.css" rel="stylesheet">
@@ -35,8 +29,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -44,19 +37,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.php">Ana Sayfa</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Yeni Yayın</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">Yayınları Görüntüle</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="../forum">Blog'u forumda görüntüle</a>
                     </li>
                 </ul>
             </div>
@@ -64,17 +57,53 @@
         </div>
         <!-- /.container -->
     </nav>
-
+    <br>
+    <br>
     <!-- Page Content -->
     <div class="container">
 
         <div class="row">
 
+            <div class="col-md-2">
+                <ul class="nav navbar-btn">
+                    <li>
+
+                        <a href="#">Önizleme</a>
+                    </li>
+                    <li>
+                        <a href="#">Kayıtlar</a>
+                    </li>
+                    <li>
+                        <a href="#">Sayfalar</a>
+                    </li>
+                    <li>
+                        <a href="#">Yorumlar</a>
+                    </li>
+                    <li>
+                        <a href="#">İstatistikler</a>
+                    </li>
+                    <li>
+                        <a href="#">Kazançlar</a>
+                    </li>
+                    <li>
+                        <a href="#">Kampanyalar</a>
+                    </li>
+                    <li>
+                        <a href="#">Yerleşim</a>
+                    </li>
+                    <li>
+                        <a href="#">Ayarlar</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-6">
 
                 <h1 class="page-header">
-                    Page Heading
+                    Blog adı buraya yazılacak
                     <small>Secondary Text</small>
                 </h1>
 
@@ -221,6 +250,10 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../documentation/js/bootstrap.min.js"></script>
+
+
+
+
 
 </body>
 

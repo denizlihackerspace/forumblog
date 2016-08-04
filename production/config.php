@@ -9,7 +9,7 @@
 
 $host="localhost";
 $user="root";
-$pass="";
+$pass="1234";
 $db="forumblog";
 
 $conn=mysqli_connect($host,$user,$pass) or die(" bağlantı başarısız" . mysqli_error($conn));
